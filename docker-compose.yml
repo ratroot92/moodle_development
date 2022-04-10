@@ -48,6 +48,7 @@ version: '2'
 services:
   mariadb:
     image: docker.io/bitnami/mariadb:10.6
+    # image: maliksblr92/mariadb:latest
     environment:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
@@ -63,6 +64,7 @@ services:
 
   moodle:
     image: docker.io/bitnami/moodle:3
+    # image: maliksblr92/moodle:latest
     ports:
       - '80:8080'
       - '443:8443'
@@ -71,6 +73,10 @@ services:
       - MOODLE_DATABASE_PORT_NUMBER=3306
       - MOODLE_DATABASE_USER=bn_moodle
       - MOODLE_DATABASE_NAME=bitnami_moodle
+      - MOODLE_USERNAME=user
+      - MOODLE_PASSWORD=bitnami
+      - MOODLE_EMAIL=maliksblr92@gmail.com
+      - MOODLE_SITE_NAME=Evergreen
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
     volumes:

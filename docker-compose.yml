@@ -47,8 +47,8 @@
 version: '2'
 services:
   mariadb:
-    image: docker.io/bitnami/mariadb:10.6
-    # image: maliksblr92/mariadb:latest
+    # image: docker.io/bitnami/mariadb:10.6
+    image: maliksblr92/mariadb:latest
     environment:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
@@ -63,8 +63,8 @@ services:
       - moodle_network
 
   moodle:
-    image: docker.io/bitnami/moodle:3
-    # image: maliksblr92/moodle:latest
+    # image: docker.io/bitnami/moodle:3
+    image: maliksblr92/moodle:latest
     ports:
       - '80:8080'
       - '443:8443'

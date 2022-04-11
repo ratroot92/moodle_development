@@ -60,6 +60,7 @@ class mod_assign_renderer extends plugin_renderer_base {
         $this->htmlid = html_writer::random_id('assign_files_tree');
         $this->page->requires->js_init_call('M.mod_assign.init_tree', array(true, $this->htmlid));
         $html = '<div id="'.$this->htmlid.'">';
+        $html = '<input type="checkobox" />';
         $html .= $this->htmllize_tree($tree, $tree->dir);
         $html .= '</div>';
 

@@ -1,3 +1,21 @@
 users
 username ==> mehran
 password ==> Codistan@123
+
+
+
+* ===========================*
+* PART A 
+* ===========================*
+
+
+
+
+sudo rm -rf /home/asd/Desktop/development/moodle/moodledata_data/
+sudo rm -rf /home/asd/Desktop/development/moodle/moodle_data
+docker volume prune -f 
+
+
+
+docker cp 18b06ecdb974:/bitnami/moodle /home/asd/Desktop/development/moodle/moodle_data
+docker cp 18b06ecdb974:/bitnami/moodledata /home/asd/Desktop/development/moodle/moodledata_data

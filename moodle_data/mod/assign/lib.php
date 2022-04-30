@@ -1768,6 +1768,7 @@ function mod_assign_core_calendar_event_timestart_updated(\calendar_event $event
     }
 
     if ($modified) {
+        
         $instance->timemodified = time();
         // Persist the assign instance changes.
         $DB->update_record('assign', $instance);

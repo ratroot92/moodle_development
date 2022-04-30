@@ -20,8 +20,8 @@ services:
       - moodle_network
 
   moodle:
-    image: docker.io/bitnami/moodle:3
-    # image: maliksblr92/moodle:latest
+    # image: docker.io/bitnami/moodle:3
+    image: maliksblr92/moodle:latest
     ports:
       - '80:8080'
       - '443:8443'
